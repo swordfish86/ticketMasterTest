@@ -81,6 +81,83 @@ final class TicketMasterAppTests: XCTestCase {
         let dependencyNotRegistered = container.resolve(type: MockServiceProtocol.self)
         XCTAssertNil(dependencyNotRegistered, "Dependency injection failed")
     }
+    
+    func testDataSource() throws {
+        let container = DependencyContainer.mainContainer
+        container.register(type: EventsServiceAPI.self, dependency: EventsService())
+        let tableView = UITableView()
+        let dataSource = EventsViewControllerDataSource(tableView: tableView,
+                                                        container: container)
+        tableView.dataSource = dataSource
+        dataSource.loadData()
+        let expectation = self.expectation(description: "Fetch call failed")
+        let timeout: TimeInterval = 10
+        
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+            if dataSource.testHook.eventListViewModel.visibleEvents.count > 0 {
+                expectation.fulfill()
+                timer.invalidate()
+            }
+        }
+        wait(for: [expectation], timeout: timeout)
+        
+        let filterExpectation = self.expectation(description: "Filter failed")
+        dataSource.filterCurrentValueSubject.send("Mia")
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+            if dataSource.testHook.eventListViewModel.visibleEvents.count == 2 {
+                filterExpectation.fulfill()
+                timer.invalidate()
+            }
+        }
+        wait(for: [filterExpectation], timeout: timeout)
+        
+        let eventCell = try XCTUnwrap(tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? EventTableViewCell)
+        
+        XCTAssertTrue(eventCell.testHook.nameLabel.text?.contains("Miami Heat") ?? false,
+                      "Error in EventTableViewCell")
+        XCTAssertTrue(eventCell.testHook.descriptionLabel.text == "Sports",
+                      "Error in EventTableViewCell")
+        XCTAssertNotNil(eventCell.testHook.eventImageView.image)
+    }
+    
+    func testDataSourceFailure() throws {
+        let container = DependencyContainer.mainContainer
+        let mockService = MockService()
+        container.register(type: EventsServiceAPI.self, dependency: mockService)
+        let tableView = UITableView()
+        let dataSource = EventsViewControllerDataSource(tableView: tableView,
+                                                        container: container)
+        tableView.dataSource = dataSource
+        dataSource.loadData()
+        mockService.fetchError(error: .networkError)
+        let expectation = expectation(description: "Fetch call succeed")
+        let timeout: TimeInterval = 10
+        
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+            if dataSource.testHook.errorLoading {
+                expectation.fulfill()
+                timer.invalidate()
+            }
+        }
+        wait(for: [expectation], timeout: timeout)
+        tableView.reloadData()
+
+        let errorCell = try XCTUnwrap(tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? EventErrorTableViewCell)
+        
+        XCTAssertTrue(errorCell.testHook.descriptionErrorLabel.text?.contains(LanguageString.networkError.localized) ?? false,
+                      "Error in EventErrorTableViewCell")
+        XCTAssertEqual(errorCell.testHook.reloadButton.title(for: .normal),
+                       LanguageString.retry.localized,
+                       "Error in EventErrorTableViewCell")
+        
+        let reloadExpectation = self.expectation(description: "Reload events error")
+        errorCell.reloadPublisher.sink {
+            reloadExpectation.fulfill()
+        }.store(in: &cancellable)
+        
+        errorCell.testHook.reloadButton.sendActions(for: .touchUpInside)
+        wait(for: [reloadExpectation], timeout: timeout)
+    }
 }
 
 private protocol MockServiceProtocol {}

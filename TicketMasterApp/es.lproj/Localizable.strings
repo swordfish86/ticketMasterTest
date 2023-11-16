@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  TicketMasterApp
+
+  Created by Jorge Angel Sanchez Martinez on 16/11/23.
+  
+*/
+"titleNavBar" = "Ticket Master";
+"networkError" = "Error de conexion";
+"retry" = "Reintentar";

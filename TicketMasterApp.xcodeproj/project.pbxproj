@@ -22,6 +22,12 @@
 		293997562B059DF5007605E6 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293997552B059DF5007605E6 /* EventTableViewCell.swift */; };
 		293997582B05B8EA007605E6 /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293997572B05B8EA007605E6 /* TableViewExtension.swift */; };
 		29B0E64E2B0689A50007C1A9 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B0E64D2B0689A50007C1A9 /* Mocks.swift */; };
+		29B0E6502B06B22F0007C1A9 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B0E64F2B06B22F0007C1A9 /* ImageLoader.swift */; };
+		29B0E6522B06E0220007C1A9 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B0E6512B06E0220007C1A9 /* MockService.swift */; };
+		29B0E6552B06F6AA0007C1A9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29B0E6572B06F6AA0007C1A9 /* Localizable.strings */; };
+		29B0E65A2B06F72F0007C1A9 /* LanguageString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B0E6592B06F72F0007C1A9 /* LanguageString.swift */; };
+		29B0E65C2B06F7600007C1A9 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B0E65B2B06F7600007C1A9 /* StringExtension.swift */; };
+		29B0E65E2B06FF790007C1A9 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B0E65D2B06FF790007C1A9 /* LocalStorage.swift */; };
 		7CB7BA6F28BAB6D650722CB0 /* Pods_TicketMasterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD83AB61A4D053F805A9AE9 /* Pods_TicketMasterApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +68,13 @@
 		293997572B05B8EA007605E6 /* TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		293997592B05F3CB007605E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		29B0E64D2B0689A50007C1A9 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		29B0E64F2B06B22F0007C1A9 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		29B0E6512B06E0220007C1A9 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
+		29B0E6562B06F6AA0007C1A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		29B0E6582B06F6B70007C1A9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		29B0E6592B06F72F0007C1A9 /* LanguageString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageString.swift; sourceTree = "<group>"; };
+		29B0E65B2B06F7600007C1A9 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		29B0E65D2B06FF790007C1A9 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		2D54ACEC0BDA85E59FD5A7A4 /* Pods-TicketMasterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketMasterApp.release.xcconfig"; path = "Target Support Files/Pods-TicketMasterApp/Pods-TicketMasterApp.release.xcconfig"; sourceTree = "<group>"; };
 		3FC28A953B6168B044893F0E /* Pods-TicketMasterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketMasterApp.debug.xcconfig"; path = "Target Support Files/Pods-TicketMasterApp/Pods-TicketMasterApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EDD83AB61A4D053F805A9AE9 /* Pods_TicketMasterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicketMasterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +143,11 @@
 				293997532B059D27007605E6 /* EventsViewControllerDataSource.swift */,
 				293997552B059DF5007605E6 /* EventTableViewCell.swift */,
 				293997572B05B8EA007605E6 /* TableViewExtension.swift */,
+				29B0E64F2B06B22F0007C1A9 /* ImageLoader.swift */,
+				29B0E6572B06F6AA0007C1A9 /* Localizable.strings */,
+				29B0E6592B06F72F0007C1A9 /* LanguageString.swift */,
+				29B0E65B2B06F7600007C1A9 /* StringExtension.swift */,
+				29B0E65D2B06FF790007C1A9 /* LocalStorage.swift */,
 			);
 			path = TicketMasterApp;
 			sourceTree = "<group>";
@@ -147,6 +165,7 @@
 			children = (
 				2939972C2B058D8D007605E6 /* TicketMasterAppTests.swift */,
 				29B0E64D2B0689A50007C1A9 /* Mocks.swift */,
+				29B0E6512B06E0220007C1A9 /* MockService.swift */,
 			);
 			path = TicketMasterAppTests;
 			sourceTree = "<group>";
@@ -265,6 +284,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 2939970F2B058D8B007605E6;
 			productRefGroup = 293997192B058D8B007605E6 /* Products */;
@@ -284,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				293997232B058D8D007605E6 /* Preview Assets.xcassets in Resources */,
+				29B0E6552B06F6AA0007C1A9 /* Localizable.strings in Resources */,
 				293997202B058D8D007605E6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,11 +374,15 @@
 			files = (
 				2939971C2B058D8B007605E6 /* TicketMasterAppApp.swift in Sources */,
 				293997542B059D27007605E6 /* EventsViewControllerDataSource.swift in Sources */,
+				29B0E65A2B06F72F0007C1A9 /* LanguageString.swift in Sources */,
+				29B0E6502B06B22F0007C1A9 /* ImageLoader.swift in Sources */,
 				293997522B059CCE007605E6 /* EventsViewController.swift in Sources */,
 				2939974A2B059363007605E6 /* EventListViewModel.swift in Sources */,
 				293997482B0592E9007605E6 /* Event.swift in Sources */,
 				2939974E2B059682007605E6 /* DependencyContainer.swift in Sources */,
+				29B0E65C2B06F7600007C1A9 /* StringExtension.swift in Sources */,
 				293997562B059DF5007605E6 /* EventTableViewCell.swift in Sources */,
+				29B0E65E2B06FF790007C1A9 /* LocalStorage.swift in Sources */,
 				293997502B0596AA007605E6 /* EventService.swift in Sources */,
 				293997582B05B8EA007605E6 /* TableViewExtension.swift in Sources */,
 			);
@@ -369,6 +394,7 @@
 			files = (
 				2939972D2B058D8D007605E6 /* TicketMasterAppTests.swift in Sources */,
 				29B0E64E2B0689A50007C1A9 /* Mocks.swift in Sources */,
+				29B0E6522B06E0220007C1A9 /* MockService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +421,18 @@
 			targetProxy = 293997332B058D8D007605E6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		29B0E6572B06F6AA0007C1A9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B0E6562B06F6AA0007C1A9 /* en */,
+				29B0E6582B06F6B70007C1A9 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2939973A2B058D8D007605E6 /* Debug */ = {

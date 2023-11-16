@@ -34,7 +34,7 @@ class EventsViewControllerDataSource: NSObject, EventsViewControllerDataSourcePr
         setupBinding()
     }
     
-    func setupBinding() {
+    private func setupBinding() {
         filterCurrentValueSubject
             .debounce(for: .milliseconds(300), scheduler: DispatchQueue.main)
             .sink { [weak self] in
@@ -56,6 +56,7 @@ class EventsViewControllerDataSource: NSObject, EventsViewControllerDataSourcePr
             }, receiveValue: { [weak self] events in
                 guard let self = self else { return }
                 self.errorLoading = false
+                self.tableView.isScrollEnabled = true
                 self.eventListViewModel = EventListViewModel(events: events)
                 self.tableView.reloadData()
             }).store(in: &cancellable)
@@ -65,14 +66,14 @@ class EventsViewControllerDataSource: NSObject, EventsViewControllerDataSourcePr
 extension EventsViewControllerDataSource {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        return  errorLoading ? 1 : eventListViewModel.visibleEvents.count
+        return errorLoading ? 1 : eventListViewModel.visibleEvents.count
     }
 
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if errorLoading {
             let errorCell: EventErrorTableViewCell = tableView.reuse()
-            errorCell.configure(with: "Network Error")
+            errorCell.configure(with: LanguageString.networkError.localized)
             errorCell.reloadPublisher.sink { [weak self] in
                 self?.loadData()
             }.store(in: &cancellable)
@@ -84,3 +85,27 @@ extension EventsViewControllerDataSource {
         }
     }
 }
+
+#if DEBUG
+extension EventsViewControllerDataSource {
+    var testHook: TestHook {
+        .init(target: self)
+    }
+    
+    struct TestHook {
+        private let target: EventsViewControllerDataSource
+
+        var eventListViewModel: EventListViewModel {
+            target.eventListViewModel
+        }
+        
+        var errorLoading: Bool {
+            target.errorLoading
+        }
+        
+        fileprivate init(target: EventsViewControllerDataSource) {
+            self.target = target
+        }
+    }
+}
+#endif

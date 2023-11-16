@@ -14,10 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
+        LocalStorage.shared.save(key: .apiKey, value: "DW0E98NrxUIfDDtNN7ijruVSm60ryFLX")
         let container = DependencyContainer.mainContainer
         container.register(type: EventsServiceAPI.self, dependency: EventsService())
         let rootController = EventsViewController(container: container)
-        window?.rootViewController = rootController
+        window?.rootViewController = UINavigationController(rootViewController: rootController)
         window?.makeKeyAndVisible()
         return true
     }

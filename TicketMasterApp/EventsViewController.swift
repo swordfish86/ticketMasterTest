@@ -36,6 +36,9 @@ class EventsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = LanguageString.titleNavBar.localized
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.backgroundColor = .purple
         datasource = EventsViewControllerDataSource(tableView: tableView,
                                                     container: container)
         tableView.dataSource = datasource

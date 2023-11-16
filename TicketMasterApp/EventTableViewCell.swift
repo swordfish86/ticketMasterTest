@@ -27,7 +27,7 @@ class EventTableViewCell: UITableViewCell {
                                         for: .vertical)
         return label
     }()
-    private let eventImageView: UIImageView! = {
+    private let eventImageView: UIImageView = {
         let image = UIImageView()
         let placeholderImage = UIImage(named: "event")
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -35,7 +35,7 @@ class EventTableViewCell: UITableViewCell {
         image.contentMode = .scaleToFill
         return image
     }()
-    private let descriptionLabel: UILabel! = {
+    private let descriptionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -94,20 +94,10 @@ class EventTableViewCell: UITableViewCell {
                         self.eventImageView.image = errorImage
                     }
                 }
-            }, receiveValue: { [weak self] imageData in
+            }, receiveValue: { [weak self] image in
                 guard let self = self else { return }
-                self.eventImageView.image = UIImage(data: imageData)
+                self.eventImageView.image = image
             }).store(in: &cancellable)
-    }
-
-    private func loadImage(from url: URL) -> AnyPublisher<UIImage?, Never> {
-        return URLSession.shared.dataTaskPublisher(for: url)
-            .map(\.data)
-            .tryMap { data in
-                return UIImage(data: data)
-            }
-            .replaceError(with: nil)
-            .eraseToAnyPublisher()
     }
 
     override func prepareForReuse() {
@@ -133,7 +123,7 @@ class EventErrorTableViewCell: UITableViewCell {
     private lazy var reloadButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Retry", for: .normal)
+        button.setTitle(LanguageString.retry.localized, for: .normal)
         button.addTarget(self, action: #selector(reloadAction(_:)), for: .touchUpInside)
         button.layer.cornerRadius = 10
         button.backgroundColor = .blue
@@ -181,3 +171,53 @@ class EventErrorTableViewCell: UITableViewCell {
         descriptionErrorLabel.text = nil
     }
 }
+
+#if DEBUG
+extension EventTableViewCell {
+    var testHook: TestHook {
+        .init(target: self)
+    }
+    
+    struct TestHook {
+        private let target: EventTableViewCell
+
+        var descriptionLabel: UILabel {
+            target.descriptionLabel
+        }
+
+        var nameLabel: UILabel {
+            target.nameLabel
+        }
+
+        var eventImageView: UIImageView {
+            target.eventImageView
+        }
+
+        fileprivate init(target: EventTableViewCell) {
+            self.target = target
+        }
+    }
+}
+
+extension EventErrorTableViewCell {
+    var testHook: TestHook {
+        .init(target: self)
+    }
+    
+    struct TestHook {
+        private let target: EventErrorTableViewCell
+
+        var reloadButton: UIButton {
+            target.reloadButton
+        }
+
+        var descriptionErrorLabel: UILabel {
+            target.descriptionErrorLabel
+        }
+
+        fileprivate init(target: EventErrorTableViewCell) {
+            self.target = target
+        }
+    }
+}
+#endif

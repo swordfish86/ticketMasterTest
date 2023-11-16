@@ -4,7 +4,7 @@
 //
 //  Created by Jorge Angel Sanchez Martinez on 15/11/23.
 //
-
+import AlamofireImage
 import Foundation
 import Combine
 
@@ -56,15 +56,10 @@ class EventViewModel {
         return event.classifications.first?.segment.name ?? ""
     }
     
-    func loadImage() -> AnyPublisher<Data, EventError> {
+    func loadImage() -> AnyPublisher<UIImage?, EventError> {
         guard let url = URL(string: imageUrl) else {
             return Fail(error: EventError.urlError).eraseToAnyPublisher()
         }
-        return URLSession.shared.dataTaskPublisher(for: url)
-            .map(\.data)
-            .mapError { _ in
-                EventError.networkError
-            }
-            .eraseToAnyPublisher()
+        return ImageLoader.loadImagePublisher(with: url).eraseToAnyPublisher()
     }
 }
