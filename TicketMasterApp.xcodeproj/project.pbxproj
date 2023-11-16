@@ -1,0 +1,690 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2939971C2B058D8B007605E6 /* TicketMasterAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939971B2B058D8B007605E6 /* TicketMasterAppApp.swift */; };
+		293997202B058D8D007605E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2939971F2B058D8D007605E6 /* Assets.xcassets */; };
+		293997232B058D8D007605E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293997222B058D8D007605E6 /* Preview Assets.xcassets */; };
+		2939972D2B058D8D007605E6 /* TicketMasterAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939972C2B058D8D007605E6 /* TicketMasterAppTests.swift */; };
+		293997372B058D8D007605E6 /* TicketMasterAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293997362B058D8D007605E6 /* TicketMasterAppUITests.swift */; };
+		293997392B058D8D007605E6 /* TicketMasterAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293997382B058D8D007605E6 /* TicketMasterAppUITestsLaunchTests.swift */; };
+		293997482B0592E9007605E6 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293997472B0592E9007605E6 /* Event.swift */; };
+		2939974A2B059363007605E6 /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293997492B059363007605E6 /* EventListViewModel.swift */; };
+		2939974E2B059682007605E6 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939974D2B059682007605E6 /* DependencyContainer.swift */; };
+		293997502B0596AA007605E6 /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2939974F2B0596AA007605E6 /* EventService.swift */; };
+		293997522B059CCE007605E6 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293997512B059CCE007605E6 /* EventsViewController.swift */; };
+		293997542B059D27007605E6 /* EventsViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293997532B059D27007605E6 /* EventsViewControllerDataSource.swift */; };
+		293997562B059DF5007605E6 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293997552B059DF5007605E6 /* EventTableViewCell.swift */; };
+		293997582B05B8EA007605E6 /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293997572B05B8EA007605E6 /* TableViewExtension.swift */; };
+		29B0E64E2B0689A50007C1A9 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B0E64D2B0689A50007C1A9 /* Mocks.swift */; };
+		7CB7BA6F28BAB6D650722CB0 /* Pods_TicketMasterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD83AB61A4D053F805A9AE9 /* Pods_TicketMasterApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		293997292B058D8D007605E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 293997102B058D8B007605E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 293997172B058D8B007605E6;
+			remoteInfo = TicketMasterApp;
+		};
+		293997332B058D8D007605E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 293997102B058D8B007605E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 293997172B058D8B007605E6;
+			remoteInfo = TicketMasterApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		293997182B058D8B007605E6 /* TicketMasterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicketMasterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2939971B2B058D8B007605E6 /* TicketMasterAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketMasterAppApp.swift; sourceTree = "<group>"; };
+		2939971F2B058D8D007605E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		293997222B058D8D007605E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		293997282B058D8D007605E6 /* TicketMasterAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicketMasterAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2939972C2B058D8D007605E6 /* TicketMasterAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketMasterAppTests.swift; sourceTree = "<group>"; };
+		293997322B058D8D007605E6 /* TicketMasterAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicketMasterAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		293997362B058D8D007605E6 /* TicketMasterAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketMasterAppUITests.swift; sourceTree = "<group>"; };
+		293997382B058D8D007605E6 /* TicketMasterAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketMasterAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		293997472B0592E9007605E6 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		293997492B059363007605E6 /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
+		2939974D2B059682007605E6 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		2939974F2B0596AA007605E6 /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		293997512B059CCE007605E6 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		293997532B059D27007605E6 /* EventsViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewControllerDataSource.swift; sourceTree = "<group>"; };
+		293997552B059DF5007605E6 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		293997572B05B8EA007605E6 /* TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
+		293997592B05F3CB007605E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		29B0E64D2B0689A50007C1A9 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		2D54ACEC0BDA85E59FD5A7A4 /* Pods-TicketMasterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketMasterApp.release.xcconfig"; path = "Target Support Files/Pods-TicketMasterApp/Pods-TicketMasterApp.release.xcconfig"; sourceTree = "<group>"; };
+		3FC28A953B6168B044893F0E /* Pods-TicketMasterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicketMasterApp.debug.xcconfig"; path = "Target Support Files/Pods-TicketMasterApp/Pods-TicketMasterApp.debug.xcconfig"; sourceTree = "<group>"; };
+		EDD83AB61A4D053F805A9AE9 /* Pods_TicketMasterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicketMasterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		293997152B058D8B007605E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CB7BA6F28BAB6D650722CB0 /* Pods_TicketMasterApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		293997252B058D8D007605E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2939972F2B058D8D007605E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2939970F2B058D8B007605E6 = {
+			isa = PBXGroup;
+			children = (
+				2939971A2B058D8B007605E6 /* TicketMasterApp */,
+				2939972B2B058D8D007605E6 /* TicketMasterAppTests */,
+				293997352B058D8D007605E6 /* TicketMasterAppUITests */,
+				293997192B058D8B007605E6 /* Products */,
+				7474E0FFD7C9A39FE7D8D228 /* Pods */,
+				E13C724AC427F628B51153C8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		293997192B058D8B007605E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				293997182B058D8B007605E6 /* TicketMasterApp.app */,
+				293997282B058D8D007605E6 /* TicketMasterAppTests.xctest */,
+				293997322B058D8D007605E6 /* TicketMasterAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2939971A2B058D8B007605E6 /* TicketMasterApp */ = {
+			isa = PBXGroup;
+			children = (
+				293997592B05F3CB007605E6 /* Info.plist */,
+				2939971B2B058D8B007605E6 /* TicketMasterAppApp.swift */,
+				2939971F2B058D8D007605E6 /* Assets.xcassets */,
+				293997212B058D8D007605E6 /* Preview Content */,
+				293997472B0592E9007605E6 /* Event.swift */,
+				293997492B059363007605E6 /* EventListViewModel.swift */,
+				2939974D2B059682007605E6 /* DependencyContainer.swift */,
+				2939974F2B0596AA007605E6 /* EventService.swift */,
+				293997512B059CCE007605E6 /* EventsViewController.swift */,
+				293997532B059D27007605E6 /* EventsViewControllerDataSource.swift */,
+				293997552B059DF5007605E6 /* EventTableViewCell.swift */,
+				293997572B05B8EA007605E6 /* TableViewExtension.swift */,
+			);
+			path = TicketMasterApp;
+			sourceTree = "<group>";
+		};
+		293997212B058D8D007605E6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				293997222B058D8D007605E6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2939972B2B058D8D007605E6 /* TicketMasterAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				2939972C2B058D8D007605E6 /* TicketMasterAppTests.swift */,
+				29B0E64D2B0689A50007C1A9 /* Mocks.swift */,
+			);
+			path = TicketMasterAppTests;
+			sourceTree = "<group>";
+		};
+		293997352B058D8D007605E6 /* TicketMasterAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				293997362B058D8D007605E6 /* TicketMasterAppUITests.swift */,
+				293997382B058D8D007605E6 /* TicketMasterAppUITestsLaunchTests.swift */,
+			);
+			path = TicketMasterAppUITests;
+			sourceTree = "<group>";
+		};
+		7474E0FFD7C9A39FE7D8D228 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3FC28A953B6168B044893F0E /* Pods-TicketMasterApp.debug.xcconfig */,
+				2D54ACEC0BDA85E59FD5A7A4 /* Pods-TicketMasterApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E13C724AC427F628B51153C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDD83AB61A4D053F805A9AE9 /* Pods_TicketMasterApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		293997172B058D8B007605E6 /* TicketMasterApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2939973C2B058D8D007605E6 /* Build configuration list for PBXNativeTarget "TicketMasterApp" */;
+			buildPhases = (
+				2C5697B375B58946B2D00504 /* [CP] Check Pods Manifest.lock */,
+				293997142B058D8B007605E6 /* Sources */,
+				293997152B058D8B007605E6 /* Frameworks */,
+				293997162B058D8B007605E6 /* Resources */,
+				7E3205B5B3E2A6F003697449 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TicketMasterApp;
+			productName = TicketMasterApp;
+			productReference = 293997182B058D8B007605E6 /* TicketMasterApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		293997272B058D8D007605E6 /* TicketMasterAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2939973F2B058D8D007605E6 /* Build configuration list for PBXNativeTarget "TicketMasterAppTests" */;
+			buildPhases = (
+				293997242B058D8D007605E6 /* Sources */,
+				293997252B058D8D007605E6 /* Frameworks */,
+				293997262B058D8D007605E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2939972A2B058D8D007605E6 /* PBXTargetDependency */,
+			);
+			name = TicketMasterAppTests;
+			productName = TicketMasterAppTests;
+			productReference = 293997282B058D8D007605E6 /* TicketMasterAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		293997312B058D8D007605E6 /* TicketMasterAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 293997422B058D8D007605E6 /* Build configuration list for PBXNativeTarget "TicketMasterAppUITests" */;
+			buildPhases = (
+				2939972E2B058D8D007605E6 /* Sources */,
+				2939972F2B058D8D007605E6 /* Frameworks */,
+				293997302B058D8D007605E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				293997342B058D8D007605E6 /* PBXTargetDependency */,
+			);
+			name = TicketMasterAppUITests;
+			productName = TicketMasterAppUITests;
+			productReference = 293997322B058D8D007605E6 /* TicketMasterAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		293997102B058D8B007605E6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					293997172B058D8B007605E6 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					293997272B058D8D007605E6 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 293997172B058D8B007605E6;
+					};
+					293997312B058D8D007605E6 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 293997172B058D8B007605E6;
+					};
+				};
+			};
+			buildConfigurationList = 293997132B058D8B007605E6 /* Build configuration list for PBXProject "TicketMasterApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2939970F2B058D8B007605E6;
+			productRefGroup = 293997192B058D8B007605E6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				293997172B058D8B007605E6 /* TicketMasterApp */,
+				293997272B058D8D007605E6 /* TicketMasterAppTests */,
+				293997312B058D8D007605E6 /* TicketMasterAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		293997162B058D8B007605E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				293997232B058D8D007605E6 /* Preview Assets.xcassets in Resources */,
+				293997202B058D8D007605E6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		293997262B058D8D007605E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		293997302B058D8D007605E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C5697B375B58946B2D00504 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TicketMasterApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E3205B5B3E2A6F003697449 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TicketMasterApp/Pods-TicketMasterApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TicketMasterApp/Pods-TicketMasterApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TicketMasterApp/Pods-TicketMasterApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		293997142B058D8B007605E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2939971C2B058D8B007605E6 /* TicketMasterAppApp.swift in Sources */,
+				293997542B059D27007605E6 /* EventsViewControllerDataSource.swift in Sources */,
+				293997522B059CCE007605E6 /* EventsViewController.swift in Sources */,
+				2939974A2B059363007605E6 /* EventListViewModel.swift in Sources */,
+				293997482B0592E9007605E6 /* Event.swift in Sources */,
+				2939974E2B059682007605E6 /* DependencyContainer.swift in Sources */,
+				293997562B059DF5007605E6 /* EventTableViewCell.swift in Sources */,
+				293997502B0596AA007605E6 /* EventService.swift in Sources */,
+				293997582B05B8EA007605E6 /* TableViewExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		293997242B058D8D007605E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2939972D2B058D8D007605E6 /* TicketMasterAppTests.swift in Sources */,
+				29B0E64E2B0689A50007C1A9 /* Mocks.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2939972E2B058D8D007605E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				293997392B058D8D007605E6 /* TicketMasterAppUITestsLaunchTests.swift in Sources */,
+				293997372B058D8D007605E6 /* TicketMasterAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2939972A2B058D8D007605E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 293997172B058D8B007605E6 /* TicketMasterApp */;
+			targetProxy = 293997292B058D8D007605E6 /* PBXContainerItemProxy */;
+		};
+		293997342B058D8D007605E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 293997172B058D8B007605E6 /* TicketMasterApp */;
+			targetProxy = 293997332B058D8D007605E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2939973A2B058D8D007605E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2939973B2B058D8D007605E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2939973D2B058D8D007605E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FC28A953B6168B044893F0E /* Pods-TicketMasterApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TicketMasterApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TicketMasterApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = selfBranding.TicketMasterApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2939973E2B058D8D007605E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D54ACEC0BDA85E59FD5A7A4 /* Pods-TicketMasterApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TicketMasterApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TicketMasterApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = selfBranding.TicketMasterApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		293997402B058D8D007605E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = selfBranding.TicketMasterAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TicketMasterApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TicketMasterApp";
+			};
+			name = Debug;
+		};
+		293997412B058D8D007605E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = selfBranding.TicketMasterAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TicketMasterApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TicketMasterApp";
+			};
+			name = Release;
+		};
+		293997432B058D8D007605E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = selfBranding.TicketMasterAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TicketMasterApp;
+			};
+			name = Debug;
+		};
+		293997442B058D8D007605E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = selfBranding.TicketMasterAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TicketMasterApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		293997132B058D8B007605E6 /* Build configuration list for PBXProject "TicketMasterApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2939973A2B058D8D007605E6 /* Debug */,
+				2939973B2B058D8D007605E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2939973C2B058D8D007605E6 /* Build configuration list for PBXNativeTarget "TicketMasterApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2939973D2B058D8D007605E6 /* Debug */,
+				2939973E2B058D8D007605E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2939973F2B058D8D007605E6 /* Build configuration list for PBXNativeTarget "TicketMasterAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				293997402B058D8D007605E6 /* Debug */,
+				293997412B058D8D007605E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		293997422B058D8D007605E6 /* Build configuration list for PBXNativeTarget "TicketMasterAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				293997432B058D8D007605E6 /* Debug */,
+				293997442B058D8D007605E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 293997102B058D8B007605E6 /* Project object */;
+}
